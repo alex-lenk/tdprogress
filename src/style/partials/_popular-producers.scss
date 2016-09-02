@@ -1,0 +1,58 @@
+.popular-producers {
+  .title {
+    color: #6e8398;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  ul {
+    padding: 15px 20px;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    &:before,
+    &:after {
+      border: 1px solid #ff6100;
+      content: "";
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      @include transition(all .3s ease);
+    }
+    &:before {
+      top: 0;
+      left: 15px;
+      border-bottom-color: transparent !important;;
+      border-right-color: transparent !important;;
+    }
+    &:after {
+      bottom: 0;
+      right: 15px;
+      border-top-color: transparent !important;
+      border-left-color: transparent !important;;
+    }
+    &:hover {
+      &:before,
+      &:after {
+        border: 4px solid #ff6100;
+      }
+    }
+  }
+  li {
+    @include to('xs') {
+      float: none;
+      width: 100%;
+    }
+    &:before {
+      content: "°";
+      margin-right: 10px;
+      line-height: 1;
+      float: left;
+      margin-top: 7px;
+    }
+  }
+}

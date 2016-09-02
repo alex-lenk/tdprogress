@@ -1,0 +1,52 @@
+.producers {
+  margin-bottom: 30px;
+  .wrapping {
+    position: relative;
+  }
+  .title {
+    margin: 0 0 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    span {
+      padding: 0 0 20px;
+      display: inline-block;
+      @include from('s') {
+        border-bottom: 5px solid #ff6100;
+      }
+    }
+  }
+  .owl-wrapper {
+    display: flex !important;
+    align-items: center;
+  }
+  .item {
+    text-align: center;
+  }
+  .control {
+    margin: 0;
+    padding: 0;
+    .fa::before {
+      line-height: 0;
+      background-color: #fff;
+    }
+    li {
+      color: #ff6100;
+      font-size: 80px;
+      cursor: pointer;
+      line-height: 0;
+      position: absolute;
+      top: 50%;
+      @include transition(all .3s ease);
+      &:hover {
+        color: #0dbae8;
+      }
+    }
+    .prev {
+      left: 0;
+    }
+    .next {
+      right: 0;
+    }
+  }
+}

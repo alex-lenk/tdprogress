@@ -1,0 +1,40 @@
+.have-questions {
+  margin-bottom: 40px;
+  @include from('s') {
+    background: url("../img/bg-have-quest.jpg") no-repeat center;
+    .row {
+      display: flex;
+      align-items: center;
+      height: 192px;
+    }
+  }
+  .left {
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    font-size: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .right {
+    text-align: right;
+    button {
+      background-color: #fff;
+      text-transform: uppercase;
+      &:hover {
+        background-color: #ff6100;
+        color: #fff;
+      }
+    }
+  }
+}

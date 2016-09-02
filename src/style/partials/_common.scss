@@ -1,0 +1,131 @@
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  color: #474747;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  @include font-size(16px);
+}
+
+input[type=file].form-control {
+  padding: 3px;
+}
+
+a {
+  color: #0dbae8;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #0980a0;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%
+}
+
+label {
+  @include font-size(14px);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.form-control::-webkit-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.form-control::-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.form-control:-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.form-control:-ms-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.form-control:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form-control:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form-control:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form-control:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: 0;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1.42857143;
+  border-radius: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  @include transition(all .3s ease);
+  &:focus {
+    outline: 0;
+  }
+  &-primary {
+    color: #ffffff;
+    background-color: #0dbae8;
+    border-color: #0ca7d0;
+  }
+}
+
+.container {
+  height: 100%;
+  .row {
+    height: 100%;
+  }
+}
+
+.content {
+  margin-bottom: 40px;
+}

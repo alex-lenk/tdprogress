@@ -1,0 +1,7 @@
+header {
+  @include from('s') {
+    overflow-x: hidden;
+    height: 641px;
+    background: url("../img/bg-header.jpg") no-repeat top center;
+  }
+}

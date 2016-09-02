@@ -1,0 +1,41 @@
+.advantages {
+  padding-top: 25px;
+  margin-bottom: 50px;
+  ul {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      text-align: center;
+      line-height: 1.4;
+      @include to('s') {
+        &:not(:last-of-type) {
+          margin-bottom: 25px;
+        }
+      }
+      &:before {
+        height: 110px;
+        margin: 0 auto 20px;
+        background: url("../img/spritesheet.png") no-repeat;
+        content: '';
+        display: block;
+      }
+      &.products:before {
+        width: 110px;
+        background-position: 0 0;
+      }
+      &.best-prices:before {
+        width: 141px;
+        background-position: 0 -110px;
+      }
+      &.consultants:before {
+        width: 89px;
+        background-position: -110px 0;
+      }
+      &.stock:before {
+        width: 117px;
+        background-position: -199px 0;
+      }
+    }
+  }
+}

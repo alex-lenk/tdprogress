@@ -1,0 +1,119 @@
+nav {
+  z-index: 8;
+  @include from('m') {
+    height: 100%;
+  }
+  .menu {
+    height: 100%;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    @include from('l') {
+      padding-right: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include to('m') {
+      top: -1000%;
+      position: absolute;
+      opacity: 0;
+      @include transition(all .6s ease);
+      &.open-menu {
+        top: 100%;
+        opacity: 1;
+        @include to('s') {
+          width: 100%;
+          left: 0;
+        }
+        li {
+          margin-bottom: 5px;
+          background-color: rgba(71, 71, 71, 0.9);
+          &.active {
+            background-color: rgba(71, 71, 71, 1);
+            span {
+              color: #fff;
+              padding: 10px 20px;
+            }
+          }
+          a {
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+            &:hover {
+              background-color: #ff6100;
+            }
+          }
+        }
+        .fa {
+          @include font-size(20px);
+        }
+      }
+    }
+    a {
+      color: #474747;
+      @include transition(all .3s ease);
+      &:hover {
+        color: #ff6100;
+        text-decoration: none;
+      }
+    }
+    .active {
+      color: #0a93b8;
+      .fa {
+        @include font-size(24px);
+      }
+    }
+  }
+  .menu-toggle {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    color: #474747;
+    z-index: 9;
+    @include font-size(14px);
+    @include transition(all .3s ease);
+    @include to('s') {
+      height: 40px;
+      position: relative;
+      background-color: #0dbae8;
+      color: #fff;
+    }
+    @include to('m') {
+      display: flex;
+    }
+    &:after {
+      background: #474747;
+      width: 20px;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      right: 20px;
+      box-shadow: 0 6px 0 0 #474747, 0 -6px 0 0 #474747;
+      content: '';
+      @include to('s') {
+        background: #fff;
+        box-shadow: 0 6px 0 0 #fff, 0 -6px 0 0 #fff;
+      }
+      @include transition(all .3s ease);
+    }
+    &:hover {
+      color: #ff6100;
+      background-color: #fff;
+      &:after {
+        background: #ff6100;
+        box-shadow: 0 6px 0 0 #ff6100, 0 -6px 0 0 #ff6100;
+      }
+    }
+  }
+}

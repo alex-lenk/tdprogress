@@ -1,0 +1,172 @@
+.top-panel {
+  position: relative;
+  @include from('m') {
+    height: 95px;
+    background-color: #fff;
+    .container {
+      height: 100%;
+      position: relative;
+      &::before {
+        width: 100%;
+        height: 100%;
+        background-color: #474747;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -100%;
+      }
+      .row {
+        height: 100%;
+      }
+    }
+  }
+  .logo-area {
+    text-align: center;
+    position: relative;
+    @include from('m') {
+      width: 366px;
+      position: absolute;
+      top: 100%;
+      left: 50px;
+      &::before {
+        position: absolute;
+        width: 300px;
+        top: 0;
+        left: -50px;
+        z-index: 5;
+        height: 0;
+        border-top: 145px solid #fff;
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+        display: block;
+        box-sizing: content-box;
+        content: '';
+      }
+    }
+    @include to('s') {
+      background-color: #fff;
+      z-index: 12;
+      padding-bottom: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .logo {
+      padding: 10px 0;
+      color: #474747;
+      position: relative;
+      z-index: 6;
+      display: block;
+      opacity: 1;
+      img {
+        margin: 15px auto;
+        display: block;
+      }
+    }
+    a {
+      @include transition(all .3s ease);
+      &:hover {
+        opacity: .8;
+        text-decoration: none;
+      }
+    }
+    span {
+      position: relative;
+      z-index: 7;
+      line-height: 1.3;
+    }
+  }
+  .contacts {
+    color: #fff;
+    @include from('m') {
+      padding-top: 10px;
+      padding-left: 23px;
+      height: 100%;
+      background: url(../img/bg-left-line.jpg) no-repeat center left #474747;
+    }
+    @include to('m') {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    span {
+      color: #ff6100;
+    }
+    .phone {
+      color: #fff;
+      @include from('xl') {
+        @include font-size(24px);
+      }
+      @include to('s') {
+        padding: 10px 15px;
+        color: #474747;
+        font-weight: 700;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      .fa {
+        margin-right: 5px;
+        @include to('s') {
+          margin-top: -4px;
+          vertical-align: middle;
+          @include font-size(24px);
+        }
+      }
+    }
+    .address {
+      margin-top: 5px;
+      display: none;
+      @include cf;
+      @include font-size(14px);
+      @include from('m') {
+        display: block;
+      }
+      .fa {
+        margin-right: 5px;
+        @include from('xl') {
+          float: left;
+          margin: 5px 10px 0 0;
+          @include font-size(24px);
+        }
+      }
+    }
+    .call-back {
+      background-color: #ff6100;
+      color: #fff;
+      border: 0;
+      @include cf;
+      @include at('m') {
+        &::before {
+          height: 100%;
+          background-color: #ff6100;
+          position: absolute;
+          width: 100%;
+          top: 0;
+          right: -100%;
+          content: '';
+        }
+      }
+      @include from('m') {
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        bottom: -40px;
+        left: 6px;
+        text-align: left;
+      }
+      .fa {
+        float: left;
+        margin: 0 10px;
+        color: #fff;
+        @include font-size(20px);
+        @include to('l') {
+          display: none;
+        }
+      }
+      &:hover {
+        background-color: #0dbae8;
+      }
+    }
+  }
+}
