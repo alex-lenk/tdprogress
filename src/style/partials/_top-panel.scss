@@ -89,6 +89,9 @@
       flex-wrap: wrap;
       justify-content: space-between;
     }
+    @include to('xs') {
+      justify-content: center;
+    }
     span {
       color: #ff6100;
     }
@@ -98,7 +101,7 @@
         @include font-size(24px);
       }
       @include to('s') {
-        padding: 10px 15px;
+        padding: 15px;
         color: #474747;
         font-weight: 700;
       }
@@ -154,6 +157,9 @@
         bottom: -40px;
         left: 6px;
         text-align: left;
+      }
+      @include to('xs') {
+        display: none;
       }
       .fa {
         float: left;

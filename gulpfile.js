@@ -6,8 +6,6 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
-    pump = require('pump'),
-    zip = require('gulp-zip'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
@@ -59,12 +57,6 @@ var config = {
     devBaseUrl: 'http://localhost'
 };
 
-
-gulp.task('zip', function () {
-    gulp.src(['./build/*', '!./build/archive.zip'])
-        .pipe(zip('archive.zip'))
-        .pipe(gulp.dest('./build'));
-});
 gulp.task('webserver', function () {
     browserSync(config);
 });

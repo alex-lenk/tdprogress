@@ -21,31 +21,50 @@ input[type=file].form-control {
 a {
   color: #0dbae8;
   text-decoration: none;
+  transition: all .4s ease;
 }
 
 a:hover, a:focus {
   color: #0980a0;
-  text-decoration: underline;
 }
 
 img {
   max-width: 100%
 }
 
+h1 {
+  @include to('xs') {
+    font-size: 25px;
+  }
+}
+
 label {
   @include font-size(14px);
 }
 
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-left {
-  text-align: left;
+.text {
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-bold {
+    font-weight: 700;
+  }
+  &-nowrap {
+    white-space: nowrap;
+  }
+  &-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
 }
 
 .form-control::-webkit-input-placeholder {
@@ -88,6 +107,13 @@ label {
   transition: opacity 0.3s ease;
 }
 
+button {
+  &:focus,
+  &:active {
+    outline: 0;
+  }
+}
+
 .btn {
   padding: 8px 12px;
   border: 0;
@@ -104,18 +130,16 @@ label {
   font-size: 16px;
   line-height: 1.42857143;
   border-radius: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  @include transition(all .3s ease);
-  &:focus {
-    outline: 0;
-  }
+  transition: all .4s ease;
   &-primary {
     color: #ffffff;
     background-color: #0dbae8;
-    border-color: #0ca7d0;
+    &:hover {
+      background-color: transparent;
+      color: #0ca7d0;
+      outline: 1px solid #0ca7d0;
+    }
   }
 }
 

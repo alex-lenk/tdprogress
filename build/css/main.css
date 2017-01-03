@@ -22,15 +22,21 @@ input[type=file].form-control {
 a {
   color: #0dbae8;
   text-decoration: none;
+  transition: all .4s ease;
 }
 
 a:hover, a:focus {
   color: #0980a0;
-  text-decoration: underline;
 }
 
 img {
   max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+  }
 }
 
 label {
@@ -47,6 +53,22 @@ label {
 
 .text-left {
   text-align: left;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -89,6 +111,10 @@ label {
   transition: opacity 0.3s ease;
 }
 
+button:focus, button:active {
+  outline: 0;
+}
+
 .btn {
   padding: 8px 12px;
   border: 0;
@@ -105,25 +131,19 @@ label {
   font-size: 16px;
   line-height: 1.42857143;
   border-radius: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.btn:focus {
-  outline: 0;
+  transition: all .4s ease;
 }
 
 .btn-primary {
   color: #ffffff;
   background-color: #0dbae8;
-  border-color: #0ca7d0;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: #0ca7d0;
+  outline: 1px solid #0ca7d0;
 }
 
 .container {
@@ -258,6 +278,12 @@ label {
   }
 }
 
+@media (max-width: 480px) {
+  .top-panel .contacts {
+    justify-content: center;
+  }
+}
+
 .top-panel .contacts span {
   color: #ff6100;
 }
@@ -274,7 +300,7 @@ label {
 
 @media (max-width: 768px) {
   .top-panel .contacts .phone {
-    padding: 10px 15px;
+    padding: 15px;
     color: #474747;
     font-weight: 700;
   }
@@ -358,6 +384,12 @@ label {
     bottom: -40px;
     left: 6px;
     text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-panel .contacts .call-back {
+    display: none;
   }
 }
 
